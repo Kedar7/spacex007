@@ -15,23 +15,18 @@ export class FlightSearchResultService {
     public queryParams;
 
     constructor(private httpClient: HttpClient, private route: ActivatedRoute) { }
-    setLaunchData(params) {
-        this.route.queryParams.subscribe(params => {
-             this.queryParams = params;
-            console.log(params)
-            console.log(this.queryParams);
 
-        });
-
-        return this.httpClient.get(this.launchUrl + params.param_data)
-
-    }
-    sendData(data) {
-        this.subject.next(data);
-        this.getLaunchData()
-    }
-
-    getLaunchData(): Observable<any> {
-        return this.subject.asObservable();
+    getLaunchData(queryParams): Observable<any> {
+        let paramString = "";
+        if (queryParams['launch_year'] != undefined && queryParams['launch_year'].length>0) {
+            paramString += "&launch_year=" + queryParams['launch_year'];
+        }
+        if (queryParams['launch_success'] != undefined && queryParams['launch_success'].length>0) {
+            paramString += "&launch_success=" + queryParams['launch_success'];
+        }
+        if (queryParams['land_success'] != undefined && queryParams['land_success'].length>0) {
+            paramString += "&land_success=" + queryParams['land_success'];
+        }
+        return this.httpClient.get(this.launchUrl + paramString)
     }
 }

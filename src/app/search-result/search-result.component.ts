@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-import {FlightSearchResultService} from '../services/flight-search-result.service'
+import { ActivatedRoute } from '@angular/router';
+import { FlightSearchResultService } from '../services/flight-search-result.service'
 
 @Component({
     selector: 'app-search-result',
@@ -9,17 +9,28 @@ import {FlightSearchResultService} from '../services/flight-search-result.servic
 })
 export class SearchResultComponent implements OnInit {
     launchList: any[] = [];
+    constructor(public flightService: FlightSearchResultService, private route: ActivatedRoute) {
+        this.route.queryParams.subscribe(queryParams => {
+            this.filterLaunches(queryParams);
+        });
+    }
 
-    constructor(public flightService: FlightSearchResultService, public cdr: ChangeDetectorRef) { }
-
-    ngOnInit(): void {
-           this.flightService.getLaunchData().subscribe
+    filterLaunches(queryParams) {
+        this.flightService.getLaunchData(queryParams).subscribe
             ((flights) => {
                 this.launchList = flights;
-                this.cdr.detectChanges()
             })
     }
-    trackByFn(index, item) {    
-        return item.id; 
-     }
+
+    ngOnInit(): void {
+        let queryParams = {};
+        this.flightService.getLaunchData(queryParams).subscribe
+            ((flights) => {
+                this.launchList = flights;
+            })
+    }
+
+    trackByFn(index, item) {
+        return item.id;
+    }
 }
