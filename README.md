@@ -1,4 +1,4 @@
-# FlightSearch
+# Spacex Launch Program
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
@@ -26,3 +26,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # spacex007
+About the  project
+This is a sample project which can be used to view launch program list of spacex. It uses spacex public API to pull its data. It is designed to be a singe page application. Angular 9 is used to create the application.
+The application is deployed on Heroku and github branch : spacex
+  
+ Highlights
+ 1. This is a progressive web application, which can be installed on any PWA compatible mobile device.
+ 2. Fully responsive to covers all range of device
+ 3. Reusable components - Cards
+ 4. Used best practises and B.E.M approach to create application. 
+ 5. Application is server-side rendered, which helps in boosting the initial page load time and increasing the SEO scores.
