@@ -11,7 +11,9 @@
     "dev:ssr": "ng run flight-search:serve-ssr",
     "serve:ssr": "node dist/flight-search/server/main.js",
     "build:ssr": "ng build --prod && ng run flight-search:server:production",
-    "prerender": "ng run flight-search:prerender"
+    "prerender": "ng run flight-search:prerender",
+    "build:prod": "ng build --prod",
+    "heroku-postbuild": "npm run build:prod"
   },
   "engines": {
     "node": "14.5.0",
