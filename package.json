@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:heroku": "node dist/server",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
@@ -12,10 +11,7 @@
     "dev:ssr": "ng run flight-search:serve-ssr",
     "serve:ssr": "node dist/flight-search/server/main.js",
     "build:ssr": "ng build --prod && ng run flight-search:server:production",
-    "prerender": "ng run flight-search:prerender",
-    "heroku-postbuild" : "ng build --prod",
-    "postinstall": "npm run build:ssr"
-
+    "prerender": "ng run flight-search:prerender"
   },
   "engines": {
     "node": "14.5.0",
