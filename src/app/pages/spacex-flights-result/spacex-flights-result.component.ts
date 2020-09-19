@@ -5,7 +5,7 @@ import { FlightSearchResultService } from '../../services/flight-search-result.s
 @Component({
     selector: 'app-spacex-flights-result',
     templateUrl: './spacex-flights-result.component.html',
-    styleUrls: ['./sspacex-flights-result.component.scss']
+    styleUrls: ['./spacex-flights-result.component.scss']
 })
 export class SpacexFlightsResultComponent implements OnInit {
     launchList: any[] = [];

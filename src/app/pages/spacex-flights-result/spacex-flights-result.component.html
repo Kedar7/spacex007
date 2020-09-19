@@ -1,5 +1,5 @@
 <div class="spacex-flight-wrapper" *ngIf="!isLoading">
-  <div class="text-align" *ngIf="isResponse">
+  <div class="spacex-flight-wrapper__alert-msg" *ngIf="isResponse">
     <p> Sorry! no data found <br><span class="sub-msg">Try something else</span> </p>
   </div>
   <app-card *ngFor="let each of launchList; trackBy: trackByFn" [card]="each">
@@ -7,7 +7,7 @@
 </div>
 
 <div class="spacex-flight-wrapper" *ngIf="isLoading">
-  <div class="text-align">
+  <div class="spacex-flight-wrapper__alert-msg">
     <p>Loading<span class="sub-msg">....</span> </p>
   </div>
 </div>

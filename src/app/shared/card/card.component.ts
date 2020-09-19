@@ -8,7 +8,6 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 export class CardComponent implements OnInit {
   @Input('card') card: any;
 
-
   constructor() { }
 
   ngOnInit(): void {
