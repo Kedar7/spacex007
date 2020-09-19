@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,14 +6,14 @@ import {Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input('card') card :any;
-  
-  
+  @Input('card') card: any;
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  trackByFn(index, item) {    
-    return item.id; 
- }
+  trackByFn(index, item) {
+    return item.id;
+  }
 }

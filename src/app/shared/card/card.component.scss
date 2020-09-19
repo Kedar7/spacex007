@@ -7,13 +7,13 @@
     height: auto;
     min-height: 150px;
   }
-.launch-item {
+.spacex-card {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
     font-weight: 500;
   }
-  .launch-name {
+  .spacex-card__title {
     color: #474f98;
     margin: 15px 0;
     font-size: 15px;
@@ -21,10 +21,10 @@
   }
   
   @media screen and (min-width: 701px) {
-    .launch-item {
+    .spacex-card {
       padding: 20px;
     }
-    .launch-name {
+    .spacex-card__title {
       font-size: 15px;
     }
   }
@@ -46,20 +46,20 @@
       grid-gap: 10px;
     }
   }
-  .launch-detail {
+  .spacex-card__detail {
     display: flex;
     align-content: center;
     margin-bottom: 2px;
     font-weight: bold;
   }
-  .launch-detail.type-list {
+  .spacex-card__detail.type-list {
     display: block;
     margin-bottom: 10px;
   }
-  .detail-label {
+  .spacex-card__detail-label {
     font-size: 20px;
   }
-  .type-list .detail-label {
+  .type-list .spacex-card__detail-label {
     font-size: 22px;
   }
   .detail-value {
@@ -74,10 +74,10 @@
   
   
   @media screen and (min-width: 701px) {
-    .detail-label,.detail-value {
+    .spacex-card__detail-label,.detail-value {
       font-size: 16px;
     }
-    .type-list .detail-label,.type-list .detail-value {
+    .type-list .spacex-card__detail-label,.type-list .detail-value {
       font-size: 18px
     }
   }

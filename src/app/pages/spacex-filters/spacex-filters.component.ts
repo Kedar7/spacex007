@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FlightSearchResultService } from '../services/flight-search-result.service'
-import { Filters } from '../../app/shared/filters/filters';
+import { FlightSearchResultService } from '../../services/flight-search-result.service'
+import { Filters } from '../../../app/shared/filters/filters';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-search-form',
-  templateUrl: './search-form.component.html',
-  styleUrls: ['./search-form.component.scss']
+  selector: 'app-spacex-filters',
+  templateUrl: './spacex-filters.component.html',
+  styleUrls: ['./spacex-filters.component.scss']
 })
-export class SearchFormComponent implements OnInit {
+export class SpacexFiltersComponent implements OnInit {
   filter = Filters;
   selected_launch_year;
   selected_successful_launch;
   selected_successful_landing;
-  land_success
+  land_success;
   constructor(public flightService: FlightSearchResultService, private router: Router, private activatedRoute: ActivatedRoute) {
 
   }

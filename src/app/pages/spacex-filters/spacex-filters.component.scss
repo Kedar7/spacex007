@@ -1,29 +1,29 @@
-.launch-filters {
+.spacex-filters {
   background: white;
   border-radius: 8px;
   padding: 10px 10px 40px 10px;
   align-self: start;
 }
-.launch-filters h2{
+.spacex-filters h2{
   font-size: 30px;
 }
 
 @media screen and (min-width: 701px) {
-  .launch-filters {
+  .spacex-filters {
     padding: 10px 0px 40px 0px;
     font-size: 8px;
   }
-  .launch-filters h2{
+  .spacex-filters h2{
     padding: 0 10px;
     font-size: 22px;
   }
 }
-.filter-category {
+.spacex-filter__category {
   text-align: center;
   margin: 5px 0 35px 0;
 }
 
-.filter-type {
+.spacex-filter__title {
   display: inline-block;
   border-bottom: 2px solid #c4bdbb;
   width: 75%;
@@ -33,7 +33,7 @@
   font-weight: 500;
 }
 
-.filter-values {
+.spacex-filter__btns {
   display: grid;
   grid-template-columns: minmax(25%, auto) minmax(25%, auto);
   justify-content: space-between;
@@ -43,13 +43,13 @@
 
 
 @media screen and (min-width: 701px) {
-  .filter-category{
+  .spacex-filter__category{
     margin: 5px 0 25px 0;
   }
-  .filter-type {
+  .spacex-filter__title {
     font-size: 18px;
   }
-  .filter-values {
+  .spacex-filter__btns {
     padding: 0 20px;
     grid-gap: 15px;
   }
@@ -66,9 +66,7 @@
   border: none;
   outline: none;
 }
-.filter-item.active {
-  background-color: #7cba01;
-}
+
 
 @media screen and (min-width: 701px) {
   .filter-item {
@@ -77,12 +75,12 @@
     border-radius: 5px;
   }
 }
-.my-class1{
+.launch-year{
   background: #7cba01;
 }
-.my-class2{
+.successful_launch{
   background: #7cba01;
 }
-.my-class3{
+.successful_landing{
   background: #7cba01;
 }

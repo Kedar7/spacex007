@@ -1,26 +1,28 @@
-<div class="launch-item" class="launch-item">
+<div class="spacex-card">
     <figure class="figure-item">
-        <img [src]="card.links.mission_patch_small" alt="" onerror="this.onerror=null;this.src='assets/images/thumbnail-default.png';" />
+        <img [src]="card.links.mission_patch_small" alt="{{card.mission_name}}"
+            onerror="this.onerror=null;this.src='assets/images/thumbnail-default.png';" />
     </figure>
-    <p ref="gf" class="launch-name">{{card.mission_name}} #{{card.flight_number}}</p>
+    <p ref="gf" class="spacex-card__title">{{card.mission_name}} #{{card.flight_number}}</p>
     <div>
-        <div class="launch-detail type-list">
-            <p class="detail-label">Mission Ids:</p>
+        <div class="spacex-card__detail type-list">
+            <p class="spacex-card__detail-label">Mission Ids:</p>
             <ul class="detail-value">
-                <li>{{card.mission_id || 'NA'}}</li>
+                <li *ngIf="card.mission_id?.length > 0" >{{card.mission_id[0]}}</li>
+                <li *ngIf="!card.mission_id?.length" >NA</li>
+
             </ul>
         </div>
-
-        <div class="launch-detail">
-            <p class="detail-label">Launch Year:</p>
+        <div class="spacex-card__detail">
+            <p class="spacex-card__detail-label">Launch Year:</p>
             <p class="detail-value">{{card.launch_year || 'NA'}}</p>
         </div>
-        <div class="launch-detail">
-            <p class="detail-label">Successful Launch:</p>
+        <div class="spacex-card__detail">
+            <p class="spacex-card__detail-label">Successful Launch:</p>
             <p class="detail-value">{{card.launch_success}}</p>
         </div>
-        <div class="launch-detail">
-            <p class="detail-label">Successful Landing:</p>
+        <div class="spacex-card__detail">
+            <p class="spacex-card__detail-label">Successful Landing:</p>
             <p class="detail-value">{{card.landing_success }}</p>
         </div>
     </div>

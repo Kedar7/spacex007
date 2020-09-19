@@ -1,0 +1,32 @@
+
+  .spacex-flight-wrapper {
+    display: grid;
+    grid-gap: 25px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .spacex-flight-wrapper {
+      grid-template-columns: repeat(4, calc(25% - 7.5px));
+      grid-gap: 10px;
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+  
+  @media screen and (min-width: 701px) and (max-width: 1023px) {
+    .spacex-flight-wrapper {
+      grid-template-columns: repeat(2, calc(50% - 5px));
+      grid-gap: 10px;
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+  .text-align{
+    grid-column: 1/5;
+  }
+  .sub-msg{
+    color: grey;
+    font-size: 20px;
+  }
