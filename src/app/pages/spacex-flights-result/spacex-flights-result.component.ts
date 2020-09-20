@@ -34,11 +34,11 @@ export class SpacexFlightsResultComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        let queryParams = {};
-        this.flightService.getLaunchData(queryParams).subscribe
-            ((flights) => {
-                this.launchList = flights;
-            })
+        // let queryParams = {};
+        // this.flightService.getLaunchData(queryParams).subscribe
+        //     ((flights) => {
+        //         this.launchList = flights;
+        //     })
     }
 
     trackByFn(index, item) {

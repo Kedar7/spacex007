@@ -1,4 +1,4 @@
-<div class="spacex-card">
+<div class="spacex-card"  [ngStyle]="{'padding-bottom': (card.mission_id?.length < 2) ? '44px' : '20px'}">
     <figure class="figure-item">
         <img [src]="card.links.mission_patch_small" alt="{{card.mission_name}}"
             onerror="this.onerror=null;this.src='assets/images/thumbnail-default.png';" />
