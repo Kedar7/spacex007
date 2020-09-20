@@ -22,7 +22,7 @@ import { environment } from '../environments/environment';
     FooterComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
