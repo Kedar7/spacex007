@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SpacexFlightsResultComponent } from './spacex-flights-result.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SearchResultComponent', () => {
   let component: SpacexFlightsResultComponent;
@@ -8,6 +9,7 @@ describe('SearchResultComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, RouterTestingModule],
       declarations: [ SpacexFlightsResultComponent ]
     })
     .compileComponents();
