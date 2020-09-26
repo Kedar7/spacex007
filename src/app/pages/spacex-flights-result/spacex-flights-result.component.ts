@@ -13,7 +13,9 @@ export class SpacexFlightsResultComponent implements OnInit {
     isResponse: boolean;
     constructor(public flightService: FlightSearchResultService, private route: ActivatedRoute) {
         this.route.queryParams.subscribe(queryParams => {
-            this.filterLaunches(queryParams);
+            if (queryParams) {
+                this.filterLaunches(queryParams);
+            }
         });
     }
 
@@ -30,7 +32,7 @@ export class SpacexFlightsResultComponent implements OnInit {
                     this.launchList = [];
                 }
                 this.isLoading = false;
-            })
+            });
     }
 
     ngOnInit(): void {

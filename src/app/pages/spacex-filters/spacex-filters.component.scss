@@ -1,23 +1,17 @@
 .spacex-filters {
   background: white;
   border-radius: 8px;
-  padding: 10px 10px 40px 10px;
-  align-self: start;
+  padding: 10px 10px 40px 10px; //top ->right ->bottom ->left
 }
 .spacex-filters h2{
   font-size: 30px;
 }
 
-@media screen and (min-width: 701px) {
-  .spacex-filters {
-    padding: 10px 0px 40px 0px;
-    font-size: 8px;
-  }
-  .spacex-filters h2{
-    padding: 0 10px;
-    font-size: 22px;
-  }
-}
+// @media screen and (min-width: 701px) {
+  
+// }
+
+
 .spacex-filter__category {
   text-align: center;
   margin: 5px 0 35px 0;
@@ -34,27 +28,13 @@
 }
 
 .spacex-filter__btns {
-  display: grid;
-  grid-template-columns: minmax(25%, auto) minmax(25%, auto);
-  justify-content: space-between;
-  padding: 0 25px;
-  grid-gap: 25px;
+  display: grid; // this is now grid container
+  grid-template-columns: minmax(25%, auto) minmax(25%, auto); //value of min:25% has to less than  max:auto, both for
+  justify-content: space-between; //Items are positioned with space between the lines	
+  padding: 0 25px; //top, bottom and right left
+  grid-gap: 25px; // setting gap between rows and columns
 }
-
-
-@media screen and (min-width: 701px) {
-  .spacex-filter__category{
-    margin: 5px 0 25px 0;
-  }
-  .spacex-filter__title {
-    font-size: 18px;
-  }
-  .spacex-filter__btns {
-    padding: 0 20px;
-    grid-gap: 15px;
-  }
-}
-.filter-item {
+.filter-item { 
   background-color: #c5e09b;
   border-radius: 8px;
   font-family: inherit;
@@ -67,14 +47,32 @@
   outline: none;
 }
 
-
-@media screen and (min-width: 701px) {
-  .filter-item {
+@media screen and (min-width: 701px) { //document size more than 701
+  .spacex-filters {
+    padding: 10px 0px 40px 0px;
+    font-size: 8px;
+  }
+  .spacex-filters h2{
+    padding: 0 10px;
+    font-size: 22px;
+  }
+  .spacex-filter__category{
+    margin: 5px 0 25px 0;
+  }
+  .spacex-filter__title {
+    font-size: 18px;
+  }
+  .spacex-filter__btns {
+    padding: 0 20px;
+    grid-gap: 15px;
+  }
+  .filter-item { // specificty weight more for this
     padding: 2px 20px 6px 20px;
     font-size: 16px;
     border-radius: 5px;
   }
 }
+
 .launch-year{
   background: #7cba01;
 }

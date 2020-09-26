@@ -1,9 +1,9 @@
-<div class="spacex-card"  >
+<div class="spacex-card">
     <figure class="figure-item">
         <img [src]="card.links.mission_patch_small" alt="{{card.mission_name}}"
             onerror="this.onerror=null;this.src='assets/images/thumbnail-default.png';" />
     </figure>
-    <p ref="gf" class="spacex-card__title">{{card.mission_name}} #{{card.flight_number}}</p>
+    <p class="spacex-card__title">{{card.mission_name}} #{{card.flight_number}}</p>
     <div>
         <div class="spacex-card__detail type-list">
             <p class="spacex-card__detail-label">Mission Ids:</p>
@@ -11,7 +11,7 @@
                 <ng-container *ngIf="card.mission_id?.length > 0">
                     <li *ngFor="let each of card.mission_id"> {{each}}</li>
                 </ng-container>
-                <li *ngIf="!card.mission_id?.length" >  NA</li>
+                <li *ngIf="!card.mission_id?.length"> NA</li>
             </ul>
         </div>
         <div class="spacex-card__detail">
@@ -20,11 +20,11 @@
         </div>
         <div class="spacex-card__detail">
             <p class="spacex-card__detail-label">Successful Launch:</p>
-            <p class="detail-value"> &nbsp; {{ launch_success}}</p>
+            <p class="detail-value"> &nbsp; {{ launchSuccess}}</p>
         </div>
         <div class="spacex-card__detail">
             <p class="spacex-card__detail-label">Successful Landing:</p>
-            <p class="detail-value"> &nbsp; {{ land_success }}</p>
+            <p class="detail-value"> &nbsp; {{ landSuccess }}</p>
         </div>
     </div>
 </div>

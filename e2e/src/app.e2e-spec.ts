@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display header title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('flight-search app is running!');
+    expect(page.getTitleText()).toEqual('SpacEx Launch programs');
   });
 
   afterEach(async () => {

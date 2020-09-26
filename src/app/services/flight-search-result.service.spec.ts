@@ -12,11 +12,11 @@ describe('FlightSearchResultService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, RouterTestingModule],
-      providers:[FlightSearchResultService]
+      providers: [FlightSearchResultService]
     });
   });
-  
   it('should be created', () => {
+    // tslint:disable-next-line: deprecation
     service = TestBed.get(FlightSearchResultService);
     expect(service).toBeTruthy();
   });

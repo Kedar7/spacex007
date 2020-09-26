@@ -5,9 +5,9 @@
     font-size: 22px;
   }
   
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) { //document should be greater that 1024px
     .spacex-flight-wrapper {
-      grid-template-columns: repeat(4, calc(25% - 7.5px));
+      grid-template-columns: repeat(4, calc(25% - 7.5px)); // creating 4 columns with repeated pattern of  calc(25% -7.5px)// 25% with gutter 7.5px
       grid-gap: 10px;
       font-size: 22px;
     }
@@ -21,7 +21,7 @@
     }
   }
   .spacex-flight-wrapper__alert-msg{
-    grid-column: 1/5;
+    grid-column: 1/5; // there are no five columns then how its stretching from 1 -> 5 ?
     text-align: center;
   }
   .sub-msg{
