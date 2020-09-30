@@ -32,7 +32,9 @@ The application is deployed on Heroku and github branch : spacex
   
  Highlights
  1. This is a progressive web application, which can be installed on any PWA compatible mobile device.
- 2. Fully responsive to covers all range of device
+ 2. Fully responsive to covers all range of device. Followed mobile approach while building application(without any library)
  3. Reusable components - Cards
  4. Used best practises and B.E.M approach to create application. 
  5. Application is server-side rendered, which helps in boosting the initial page load time and increasing the SEO scores.
+ 6. Implemented Unit Test Cases.
+ 
